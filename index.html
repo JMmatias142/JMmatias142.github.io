@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Villamayor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+<div class="fondo">
+    <div class="linea"></div>
+    <header class="nav">
+        <a href="#" class="logo" data-aos="fade-right" data-aos-duration="1500">JV</a>
+        <nav>
+            <ul>
+                <li data-aos="fade-down" data-aos-duration="400"><a href="#" >INICIO</a></li>
+                <li data-aos="fade-down" data-aos-duration="800"><a href="#">TRABAJOS</a></li>
+                <li data-aos="fade-down" data-aos-duration="1200"><a href="#">PROYECTOS</a></li>
+                <li data-aos="fade-down" data-aos-duration="1600"><a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inicio">
+        <div class="pelota1 object" data-value="5" data-aos="fade-right">
+        </div><div class="pelota2 object" data-value="8" data-aos="fade-left">
+        </div><div class="pelota3 object" data-value="20" data-aos="fade-right" ></div>
+        <div class="presentacion" >
+            <div data-aos="zoom-in" data-aos-duration="3000" class="sub-presentacion">
+            <h1>Hola,<br>soy Juan Villamayor<br><h3 id="cribir"></h3></h1>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <section class="proyectos">
+        <div class="title-proyectos"><h1>Algunos Proyectos</h1></div>
+
+        <div class="proyecto1">
+
+            <div class="image">
+                <img src="ejemplo1.jpg" alt="">
+                <div class="text">
+                    <div class="text-son">
+                        <h1>Lorem Ipsom</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis excepturi placeat repellat libero eius iste illum totam laborum delectus, obcaecati inventore vitae beatae, tenetur, reiciendis ad cumque? Adipisci, suscipit alias.</p>
+                        <div class="a"><a href="">Ver Proyecto</a> <a href="">Ver Codigo</a> </div>
+                </div>
+                    </div>
+            </div>
+    </section>
+
+
+
+
+
+    <script type="text/javascript">
+        var i, text;
+        i = 0;
+        text ="un diseñador web.";
+
+        function escribir(){
+            if(i < text.length){
+                document.getElementById("cribir").innerHTML+= text.charAt(i);
+                i++;
+                setTimeout(escribir, 100);
+            }
+        }
+        setTimeout(escribir, 2000);
+    </script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

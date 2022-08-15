@@ -1,0 +1,320 @@
+:root{
+
+    --color-texto:white;
+    --color-1: #000;
+
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+body{
+    background-color:var(--color-1);
+    color: var(--color-texto);
+    overflow-x: hidden;
+    padding: 30px 14% 30px 14%;
+}
+
+/*MENU Y LOGO*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:13vh ;
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 30px 14% 30px 14%;
+}
+
+header .logo{
+    font-size: 5vmax;
+    font-size: 8vmin;
+    cursor: pointer;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-family: aboreto;
+    animation: move 2s 6s;
+}
+@keyframes move{
+    50%{
+        text-shadow: 0px  0px 10px var(--color-texto),
+        0px  0px 10px var(--color-texto),
+        0px  0px 10px var(--color-texto),
+        0px  5px 20px var(--color-texto),
+        0px  10px 20px var(--color-texto),
+        0px  20px 30px var(--color-texto),
+        0px  0px 40px var(--color-texto);
+    }
+}
+header .logo:hover{
+    color: var(--color-texto);
+    text-shadow: 0px  0px 10px var(--color-texto),
+    0px  0px 10px var(--color-texto),
+    0px  0px 10px var(--color-texto),
+    0px  5px 20px var(--color-texto),
+    0px  10px 20px var(--color-texto),
+    0px  20px 30px var(--color-texto),
+    0px  0px 40px var(--color-texto);
+    transition: 0.1s;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 5vh;
+    color: var(--color-texto);
+    font-size: 2.5vh;
+}
+nav ul li a:hover{
+    color: var(--color-texto);
+    text-shadow: 0px  0px 10px var(--color-texto),
+    0px  0px 10px var(--color-texto),
+    0px  0px 10px var(--color-texto),
+    5px  5px 20px var(--color-texto),
+    10px  10px 20px var(--color-texto),
+    20px  20px 30px var(--color-texto),
+    0px  0px 40px var(--color-texto);
+    transition: 0.5s;
+}
+/*BOLAS*/
+.pelota1{
+position: absolute;
+width: 3rem;
+height: 3rem;
+background: #C33764;  
+background: -webkit-linear-gradient(to right, #879787, #879787); 
+background: linear-gradient(to right, #F0F2F0, #879787); 
+border-radius: 50%;
+transform: rotate(50deg);
+left: 27vh;
+top: 75VH;
+z-index: 1;
+box-shadow: #F0F2F0 0px 0px 20px,#F0F2F0 -5px 0px 20px, #F0F2F0 0px 0px 40px;
+filter: blur(2px);
+}
+.pelota2{
+position: absolute;
+width: 20rem;
+height: 20rem;
+background: #EF3B36; 
+background: -webkit-linear-gradient(to right, #FFFFFF, #EF3B36);  
+background: linear-gradient(to right, #FFFFFF, #EF3B36); 
+border-radius: 50%;
+transform: rotate(50deg);
+right: -20vh;
+top: 70vh;
+z-index: 1;
+box-shadow: #EF3B36 0px 0px 20px,#EF3B36 10px 0px 50px, #EF3B36 10px 0px 80px;
+filter: blur(2px);
+}
+.pelota3{
+position: absolute;
+width: 10rem;
+height: 10rem;
+background: #159957; 
+background: -webkit-linear-gradient(to right, #155799, #159957);
+background: linear-gradient(to right, #155799, #159957); 
+border-radius: 50%;
+transform: rotate(50deg);
+left: 65vh;
+top: 30vh;
+z-index: 1;
+box-shadow: #12c2e9 0px 0px 20px,#12c2e9 10px 0px 50px, #12c2e9 10px 0px 80px;
+filter: blur(2px);
+}
+section{
+    width: 100%;
+}
+/*Texto*/
+.presentacion{
+    position: absolute;
+    left: 14%;
+    top: 35vh;
+    z-index: 10;
+}
+.sub-presentacion h3{
+    animation: movimiento 1s 3s forwards;
+}
+.presentacion h1{
+    font-size: 10vh;
+}
+.presentacion h3{
+    font-size: 7vh;
+}
+.presentacion h3{
+    color: white;
+    animation: diseno 1s forwards 5s;
+}
+@keyframes diseno {
+    80%{
+        padding-left: 5%;
+    }
+    98%{
+        padding-left: 0;
+        text-shadow: #fff 0px 0px 10px, #fff 0px 0px 30px, #fff 0px 0px 50px;
+        filter: blur(2px);
+    }
+    100%{
+        background-image: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); 
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color:transparent;
+    }
+}
+/*LINEA DE LA IZQUIERDA*/
+ .linea{
+    position: absolute;
+    background-image: linear-gradient(to bottom, white,  #12c2e9, #c471ed, #f64f59); 
+    top: -5vh;
+    left: 3%;
+    animation: line 3s ease 5s forwards;
+    z-index: 1001;
+ }
+ @keyframes line{
+    0%{
+        height: 2px;
+        width: 2px;
+    }
+    100%{
+        height: 400vh;
+        width: 2px;
+    }
+ }
+
+ /*PROYECTOS*/
+.proyectos{
+    position: relative;
+    top: 100vh;
+    z-index: 100;
+ }
+ .proyecto1{
+    position: relative;
+ }
+ .title-proyectos{
+    position: relative;
+    font-size: 2.5vmax;
+    text-align: center;
+    margin-bottom: 4rem;
+ }
+.proyecto1 img{
+    width: 100%;
+    border-radius: 4px;
+}
+.image{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.image img{
+    display: block;
+    width: 100%;
+}
+.text{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.text-son{
+    position: relative;
+    text-align: center;
+
+}
+.text-son h1{
+    margin-top: 2vw;
+    font-size: 5vw;
+}
+.text-son p{
+    margin-top: 3vw;
+    font-size: 3vw;
+}
+.text-son a{
+    position: relative;
+    color: white;
+    text-decoration:none ;
+    font-size: 2.5vh;
+    margin: 3vw;
+    top: 6vh;
+    padding: 10px;
+    border: #fff 2px solid;
+    border-radius: 30px;
+}
+
+.text-son a:hover{
+    color: #155799;
+    background-color: white;
+    transition: 0.5s;
+}
+.text:hover{
+    opacity: 1;
+}
+
+
+
+
+/*RESPONVISE*/
+ @media (max-width:1000px) {
+    body{
+        padding: 30px 0% 30px 0%;
+    }
+    header{
+        padding: 30px 7% 30px 7%;
+        height: 10vh;
+    }
+    header .logo{
+        position: relative;
+        left: 43%;
+    }
+    .presentacion{
+        left: 7%;
+    }
+    header nav ul li a{
+        visibility: hidden;
+    }
+    .pelota3{
+        left: 40vh;
+        top: 15vh;
+    }
+    .proyectos{
+        top: 120vh;
+    }
+    .proyecto1, .proyecto2, .proyecto3{
+        margin: 0;
+    }
+    .presentacion{
+        top: 25vh;
+    }
+
+ }
+
+ @keyframes proyectos-mobile{
+    0%{
+
+    }
+ }
+
+
+
+
+
+
