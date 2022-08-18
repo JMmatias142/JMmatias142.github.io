@@ -1,5 +1,5 @@
 :root{
-
+    --linear-color: linear-gradient(to bottom, #000c40, #333399, #000c40);
     --color-texto:white;
     --color-1: #000;
 
@@ -10,21 +10,29 @@
     box-sizing: border-box;
     font-family: roboto;
 }
-
 body{
-    background-color:var(--color-1);
+    background: black;
     color: var(--color-texto);
     overflow-x: hidden;
     padding: 30px 14% 30px 14%;
 }
-
 /*MENU Y LOGO*/
+
+.fondo{
+    background: var(--linear-color);
+    width: 100%;
+    z-index: 100;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height:13vh ;
+    height:8vw;
     display: flex;
     object-fit: cover;
     justify-content: space-between;
@@ -32,7 +40,6 @@ header{
     z-index: 1000;
     padding: 30px 14% 30px 14%;
 }
-
 header .logo{
     font-size: 5vmax;
     font-size: 8vmin;
@@ -73,10 +80,11 @@ nav ul{
 nav ul li{
     list-style: none;
     margin-left: 20px;
+    text-align: center;
 }
 nav ul li a{
     text-decoration: none;
-    padding: 5vh;
+    padding: 4vh;
     color: var(--color-texto);
     font-size: 2.5vh;
 }
@@ -90,6 +98,7 @@ nav ul li a:hover{
     20px  20px 30px var(--color-texto),
     0px  0px 40px var(--color-texto);
     transition: 0.5s;
+    border-bottom: #FFFFFF 3px solid;
 }
 /*BOLAS*/
 .pelota1{
@@ -147,6 +156,14 @@ section{
     top: 35vh;
     z-index: 10;
 }
+.subrayado{
+    width: 60vw;
+    height: 3px;
+    color: white;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .sub-presentacion h3{
     animation: movimiento 1s 3s forwards;
 }
@@ -184,7 +201,7 @@ section{
     top: -5vh;
     left: 3%;
     animation: line 3s ease 5s forwards;
-    z-index: 1001;
+    z-index: 1;
  }
  @keyframes line{
     0%{
@@ -254,12 +271,12 @@ section{
     text-decoration:none ;
     font-size: 2.5vh;
     margin: 3vw;
-    top: 6vh;
+    top: 16vh;
     padding: 10px;
     border: #fff 2px solid;
     border-radius: 30px;
-}
 
+}
 .text-son a:hover{
     color: #155799;
     background-color: white;
