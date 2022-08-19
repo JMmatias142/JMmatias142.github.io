@@ -158,14 +158,19 @@ section{
     left: 14%;
     top: 35vh;
     z-index: 10;
+
+}
+.presentacion h1{
+    font-family: 'alumini sans pinstripe';
 }
 .subrayado{
-    width: 60vw;
-    height: 3px;
-    color: white;
-    background-color: white;
+    width: 0;
+    height: 0;
     margin-top: 10px;
     margin-bottom: 10px;
+    animation: line 3s ease 3.5s forwards;
+    z-index: 1;
+    visibility: hidden;
 }
 .sub-presentacion h3{
     animation: movimiento 1s 3s forwards;
@@ -178,7 +183,7 @@ section{
 }
 .presentacion h3{
     color: white;
-    animation: diseno 1s forwards 5s;
+    animation: diseno 1.5s forwards 5s;
 }
 @keyframes diseno {
     80%{
@@ -203,25 +208,23 @@ section{
     background-image: linear-gradient(to bottom, white,  #12c2e9, #c471ed, #f64f59); 
     top: -5vh;
     left: 3%;
-    animation: line 3s ease 5s forwards;
+    animation: line 5s ease 1s forwards;
     z-index: 1;
  }
  @keyframes line{
-    0%{
-        height: 2px;
-        width: 2px;
-    }
     100%{
-        height: 400vh;
-        width: 2px;
+        height: 2px;
+        width: 60vw;
+        visibility: visible;
     }
  }
 
  /*PROYECTOS*/
 .proyectos{
     position: relative;
-    top: 100vh;
+    top: 125vh;
     z-index: 100;
+    padding: 30px 14% 30px 14%;
  }
  .proyecto1{
     position: relative;
@@ -229,12 +232,14 @@ section{
  .title-proyectos{
     position: relative;
     font-size: 2.5vmax;
-    text-align: center;
-    margin-bottom: 4rem;
+    text-align: left;
+    margin-left: 1vw;
+    margin-bottom: 10rem;
  }
 .proyecto1 img{
     width: 100%;
     border-radius: 4px;
+    
 }
 .image{
     position: relative;
@@ -293,7 +298,7 @@ section{
 
 
 /*RESPONVISE*/
- @media (max-width:1000px) {
+ @media (max-width:900px) {
 
     body{
         padding: 30px 0% 30px 0%;
@@ -319,6 +324,7 @@ section{
     }
     .proyectos{
         top: 120vh;
+        padding: 0;
     }
     .proyecto1, .proyecto2, .proyecto3{
         margin: 0;
@@ -326,6 +332,20 @@ section{
     .presentacion{
         top: 25vh;
     }
+    .title-proyectos{
+        position: relative;
+        font-size: 2.5vmax;
+        text-align: left;
+        margin-left: 8vw;
+        margin-bottom: 4rem;
+     }
+    @keyframes line{
+        100%{
+            height: 2px;
+            width: 80vw;
+            visibility: visible;
+        }
+     }
 
  }
 
